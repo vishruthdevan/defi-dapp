@@ -1,0 +1,23 @@
+{
+  "name": "defi-dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishruthdevan/defi-dapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishruthdevan/defi-dapp/issues"
+  },
+  "homepage": "https://github.com/vishruthdevan/defi-dapp#readme",
+  "devDependencies": {
+    "hardhat": "^2.12.0"
+  }
+}
