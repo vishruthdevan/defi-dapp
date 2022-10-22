@@ -16,4 +16,14 @@ contract BuyMeACoffee {
         string name;
         string message;
     }
+
+    Memo[] memos;
+
+    address payable owner;
+    
+    constructor() {
+        owner = payable(msg.sender);
+    }
+
+
 }
