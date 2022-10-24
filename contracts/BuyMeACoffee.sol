@@ -7,10 +7,10 @@ contract BuyMeACoffee {
         address indexed from,
         uint256 timestamp,
         string name,
-        string message        
+        string message
     );
 
-    struct Memo{
+    struct Memo {
         address from;
         uint256 timestamp;
         string name;
@@ -20,10 +20,19 @@ contract BuyMeACoffee {
     Memo[] memos;
 
     address payable owner;
-    
+
     constructor() {
         owner = payable(msg.sender);
     }
 
+    function buyCoffee(string memory _name, string memory _message)
+        public
+        payable
+    {
+        require(msg.value > 0, "Cannot buy coffee with 0 eth!");
 
+        memos.push(Memo(msg.sender, block.timestamp, _name, _message));
+
+        emit NewMemo(msg.sender, block.timestamp, _name, _message);
+    }
 }
