@@ -39,4 +39,8 @@ contract BuyMeACoffee {
     function withdrawTips() public {
         require(owner.send(address(this).balance));
     }
+
+    function getMemos() public view returns (Memo[] memory) {
+        return memos;
+    }
 }
