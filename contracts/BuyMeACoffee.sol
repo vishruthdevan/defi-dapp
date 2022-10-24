@@ -35,4 +35,8 @@ contract BuyMeACoffee {
 
         emit NewMemo(msg.sender, block.timestamp, _name, _message);
     }
+
+    function withdrawTips() public {
+        require(owner.send(address(this).balance));
+    }
 }
